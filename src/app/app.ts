@@ -11,12 +11,32 @@ import { Event } from './event/event';
   templateUrl: './app.html',
 })
 export class App {
-  name="Angular tutorial";
-  username="GP";
-  isAdmin=true;
-  count=3;
-  getUser(){
-    return "Virat Kohli";
+  name = 'Mohit';
+
+  handleClick() {
+    let abc="abcd";
+    console.log('Button clicked!',abc);
+    //this.helloWorld();
   }
-  title=signal("Angular tutorial");
+  helloWorld() {
+    console.log('Hello World!');   
+  }
+  handleInput(event: any) {
+    console.log('Input event:', event);
+  }
+  onKeyUp(event: any) {
+    console.log('KeyUp event:', event.key);
+  }
+  onHover() {
+    console.log('Mouse hover event!');
+  }
+  onLeave() {
+    console.log('Mouse leave event!');
+  }
+  onBlur() {
+    console.log('Input blur event!');
+  }
+  onFocus() {
+    console.log('Input focus event!');
+  }
 }

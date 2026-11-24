@@ -1,13 +1,6 @@
-<h1>Tejas H K</h1>
-<p>{{name}}</p>
-<p>{{username}}</p>
-<p>{{isAdmin}}</p>
-<p>{{count}}</p>
-<p>{{name.toUpperCase()}}</p>
-<p>{{isAdmin ? 'Admin' : 'User'}}</p>
-<p>{{name}},{{username}},{{count}}</p>
-<p>{{getUser()}}</p>
-<h1>{{title()}}</h1>
-<app-login></app-login>
-<app-signin></app-signin>   
-<app-event></app-event>
+<h1>{{name}}</h1>
+<button (click)="handleClick()">Submit</button>
+<input (input)="handleInput($event.target.value)" placeholder="Enter text..." />
+<input (keyup)="onKeyUp($event)" placeholder="Type something..." />
+<div (mouseover)="onHover()" (mouseout)="onLeave()" class="hover-box">Hover over me!</div>
+<input (blur)="onBlur()" (focus)="onFocus()" placeholder="Click outside me..." />
