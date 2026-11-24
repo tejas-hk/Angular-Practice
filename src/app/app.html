@@ -1,6 +1,12 @@
-<h1>{{name}}</h1>
-<button (click)="handleClick()">Submit</button>
-<input (input)="handleInput($event.target.value)" placeholder="Enter text..." />
-<input (keyup)="onKeyUp($event)" placeholder="Type something..." />
-<div (mouseover)="onHover()" (mouseout)="onLeave()" class="hover-box">Hover over me!</div>
-<input (blur)="onBlur()" (focus)="onFocus()" placeholder="Click outside me..." />
+<h1>Simple Counter </h1>
+<p class="count">{{ counter }}</p>
+
+<div class="btns">
+    <!-- <button (click)="handleAdd()">+</button>
+    <button (click)="handleSubtract()">-</button>
+    <button (click)="handleReset()">Reset</button> -->
+
+    <button (click)="handle('plus')">+</button>
+    <button (click)="handle('minus')">-</button>
+    <button (click)="handle('reset')">Reset</button>
+</div>
