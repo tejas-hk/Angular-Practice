@@ -8,14 +8,14 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
 })
 export class App {
-  name:string="";
-  city:string="";
-  email:string="";
-  updateName(value:string){
-    this.name=value;
+  isLoggedIn=true;
+  showBox=true;
+  age:number = null!;
+  status:string = "processing";
+  section='home';
+  toggleBox() { 
+    this.showBox = !this.showBox;
   }
-  getEmail(value:string){
-    this.email=value;
-  }
-
-}
+  updateAge(event: string) {
+    this.age=Number(event);
+}}

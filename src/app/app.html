@@ -1,26 +1,52 @@
-<input (input)="updateName($event.target.value)" placeholder="Enter your name" >
-<p>{{name}}</p>
+@if(isLoggedIn) {
+  <h1>Welcome back!</h1>
+} @else {
+  <h1>Please log in.</h1>
+}
 
-<input (input)="city=$event.target.value" placeholder="Enter city name">
-<p>{{city}}</p> 
+<button (click)="toggleBox()">Toggle Box</button>
 
-<input #userInput placeholder="Enter your email">
-<button (click)="getEmail(userInput.value)">Submit</button>
-<p>{{email}}</p>
+@if(showBox) {
+  <div class="box">
+    This is a box that can be toggled.
+  </div>
+}
 
-<div class="hero-box">
-    Welcome Tejas
-</div>
+<input (input)="updateAge($event.target.value)" placeholder="Enter your age" />
 
-<div class="text-center rounded" >
-    Gp
-</div>
+@if(age >= 18) {
+  <p>You are an adult.</p>
+} @else {
+  <p>You are a minor.</p>
+}
 
+@if(status === 'loading') {
+  <p>Loading...</p>
+} @else if(status === 'processing') {
+  <p>Data is being processed.   </p>
+} @else {
+  <p>Error loading data.</p>
+}
 
-<style>
-    .inline{
-        color: red;
-        font-size: 20px;
-    }
-</style>
-<h3 class="inline">Inline CSS</h3>
+@if(age<10) {
+  <p>You are a child.</p>
+} @else if(age>=10 && age<20) {
+  <p>You are a teenager.</p>
+} @else {
+  <p>You are an adult.</p>
+}   
+
+<button (click)="section='home'">Home</button>
+<button (click)="section='about'">About</button>
+<button (click)="section='contact'">Contact</button>
+
+@if(section === 'home') {
+  <h2>Home Section</h2>
+  <p>Welcome to the home section of our application.</p>
+} @else if(section === 'about') {
+  <h2>About Section</h2>
+  <p>This section contains information about our application.</p>
+} @else if(section === 'contact') {
+  <h2>Contact Section</h2>
+  <p>You can reach us through the contact section.</p>
+}
