@@ -1,23 +1,4 @@
-h1{
-    text-align: center;
-    color: #333;
-}
-
-.count{
-    text-align: center;
-    font-size: 24px;
-}
-
-.btns{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-button{
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+.hero-box{
+    padding: 20px;
+    background-color: gold;
 }

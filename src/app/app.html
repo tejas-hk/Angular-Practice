@@ -1,12 +1,26 @@
-<h1>Simple Counter </h1>
-<p class="count">{{ counter }}</p>
+<input (input)="updateName($event.target.value)" placeholder="Enter your name" >
+<p>{{name}}</p>
 
-<div class="btns">
-    <!-- <button (click)="handleAdd()">+</button>
-    <button (click)="handleSubtract()">-</button>
-    <button (click)="handleReset()">Reset</button> -->
+<input (input)="city=$event.target.value" placeholder="Enter city name">
+<p>{{city}}</p> 
 
-    <button (click)="handle('plus')">+</button>
-    <button (click)="handle('minus')">-</button>
-    <button (click)="handle('reset')">Reset</button>
+<input #userInput placeholder="Enter your email">
+<button (click)="getEmail(userInput.value)">Submit</button>
+<p>{{email}}</p>
+
+<div class="hero-box">
+    Welcome Tejas
 </div>
+
+<div class="text-center rounded" >
+    Gp
+</div>
+
+
+<style>
+    .inline{
+        color: red;
+        font-size: 20px;
+    }
+</style>
+<h3 class="inline">Inline CSS</h3>
